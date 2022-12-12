@@ -6,7 +6,6 @@ export function UserProvider({ children }) {
   const [user, setUser] = useState(null);
   const [users, setUsers] = useState([]);
 
-  console.log('users', users)
   const loginUser = (data) => {
     const user = users.filter(
       (user) => user.email === data.email && user.password === data.password

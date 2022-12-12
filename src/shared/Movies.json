@@ -1,0 +1,46 @@
+{
+  "movies": [
+    {
+      "title": "Avatar",
+      "genre": "Fantasy",
+      "stock": "",
+      "rate": "7.9"
+    },
+    {
+      "title": "I Am Legend",
+      "genre": "Drama",
+      "stock": "",
+      "rate": "7.2"
+    },
+    {
+      "title": "The Avengers",
+      "genre": "Action",
+      "stock": "",
+      "rate": "8.1"
+    },
+    {
+      "title": "Interstellar",
+      "genre": "Drama",
+      "stock": "",
+      "rate": "8.6"
+    },
+    {
+      "title": "Breaking Bad",
+      "genre": "Thriller",
+      "stock": "",
+      "rate": "9.5"
+    },
+    {
+      "title": "Game of Thrones",
+      "genre": "Fantasy",
+      "stock": "",
+      "rate": "9.5"
+    },
+    {
+      "title": "Vikings",
+      "genre": "History",
+      "stock": "",
+      "rate": "8.6"
+    }
+  ]
+}

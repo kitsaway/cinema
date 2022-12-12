@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -10,6 +11,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { Menu as MenuIcon } from "@mui/icons-material";
+import UserContext from "../../context/UserContext";
 
 const pages = [
   {
@@ -23,6 +25,7 @@ const pages = [
 ];
 
 const Header = () => {
+  const { user, logoutUser } = useContext(UserContext);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -68,7 +71,7 @@ const Header = () => {
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                   <Link to={`${page.path}`} style={{ textDecoration: "none" }}>
-                    <Typography textAlign="center" variant="body1">
+                    <Typography textAlign="center" variant="body2">
                       {page.name}
                     </Typography>
                   </Link>
@@ -94,9 +97,21 @@ const Header = () => {
 
           <Box sx={{ flexGrow: 0 }}>
             <Button sx={{ my: 2, color: "white", display: "block" }}>
-              <Typography textAlign="center" variant="body1">
-                Login
-              </Typography>
+              {user ? (
+                <Typography
+                  textAlign="center"
+                  variant="body1"
+                  onClick={() => logoutUser()}
+                >
+                  Log out
+                </Typography>
+              ) : (
+                <Link to="/signin" style={{ textDecoration: "none" }}>
+                  <Typography textAlign="center" variant="body1">
+                    Sign in
+                  </Typography>
+                </Link>
+              )}
             </Button>
           </Box>
         </Toolbar>

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -20,9 +21,14 @@ const Movie = ({ movie: { id, title, genre, rate } }) => {
   return (
     <Card sx={{ minWidth: 155 }}>
       <CardContent>
-        <Typography variant="h5" component="div">
-          {title}
-        </Typography>
+        <Link
+          to={`/${id}`}
+          style={{ textDecoration: "none", color: "#1B2330" }}
+        >
+          <Typography variant="h5" component="div">
+            {title}
+          </Typography>
+        </Link>
         <Typography sx={{ mb: 1.5, color: "#808080" }}>{genre}</Typography>
         <Typography
           sx={{

@@ -2,29 +2,24 @@ import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
-    background: {
-      paper: "#1B2330",
-      default: "#0D1218",
-    },
     primary: {
       main: "#1B2330",
       contrastText: "#fff",
     },
     secondary: {
-      main: "rgba(78, 151, 194, 1)",
-      contrastText: "#fff",
+      main: "#C1C1C1",
+      contrastText: "#1B2330",
     },
     error: {
       main: "#F44336",
       contrastText: "#fff",
     },
     text: {
-      primary: "#fff",
+      primary: "#1B2330",
       secondary: "rgba(255, 255, 255, 0.7)",
       disabled: "rgba(255, 255, 255, 0.38)",
     },
   },
-  
   typography: {
     button: {
       textTransform: "none",
@@ -50,17 +45,14 @@ const theme = createTheme({
       fontSize: "4rem",
       fontWeight: 700,
       lineHeight: 1,
-      color: "#fff",
     },
     h2: {
       letterSpacing: "-.025em",
       fontWeight: 700,
       fontSize: "2.25rem",
       lineHeight: 1.85,
-      color: "#fff",
     },
     h3: {
-      color: "#fff",
       fontWeight: 500,
       fontSize: "1.25rem",
       lineHeight: 1.75,
@@ -69,12 +61,11 @@ const theme = createTheme({
       fontSize: "1rem",
       lineHeight: 1.75,
       color: "#D1D5DB",
-      textDecorationStyle: "none"
     },
     body2: {
       fontSize: "1rem",
       lineHeight: 1.75,
-      color: "#9CA3AF",
+      color: "#1B2330",
     },
   },
   breakpoints: {

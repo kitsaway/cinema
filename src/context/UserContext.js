@@ -10,12 +10,16 @@ export function UserProvider({ children }) {
     const user = users.filter(
       (user) => user.email === data.email && user.password === data.password
     );
-    setUser(user[0]);
+    if (user) {
+      setUser(user[0]);
+    } else {
+      alert("User doesn't exist");
+    }
   };
 
   const logoutUser = () => {
     setUser(null);
-  }
+  };
 
   const registerUser = (newUser) => {
     const userExists = users.find((user) => user.email === newUser.email);

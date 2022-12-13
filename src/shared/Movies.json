@@ -1,46 +1,44 @@
-{
-  "movies": [
-    {
-      "title": "Avatar",
-      "genre": "Fantasy",
-      "stock": "",
-      "rate": "7.9"
-    },
-    {
-      "title": "I Am Legend",
-      "genre": "Drama",
-      "stock": "",
-      "rate": "7.2"
-    },
-    {
-      "title": "The Avengers",
-      "genre": "Action",
-      "stock": "",
-      "rate": "8.1"
-    },
-    {
-      "title": "Interstellar",
-      "genre": "Drama",
-      "stock": "",
-      "rate": "8.6"
-    },
-    {
-      "title": "Breaking Bad",
-      "genre": "Thriller",
-      "stock": "",
-      "rate": "9.5"
-    },
-    {
-      "title": "Game of Thrones",
-      "genre": "Fantasy",
-      "stock": "",
-      "rate": "9.5"
-    },
-    {
-      "title": "Vikings",
-      "genre": "History",
-      "stock": "",
-      "rate": "8.6"
-    }
-  ]
-}
+[
+  {
+    "id": "1",
+    "title": "Avatar",
+    "genre": "Fantasy",
+    "rate": "7.9"
+  },
+  {
+    "id": "2",
+    "title": "I Am Legend",
+    "genre": "Drama",
+    "rate": "7.2"
+  },
+  {
+    "id": "3",
+    "title": "The Avengers",
+    "genre": "Action",
+    "rate": "8.1"
+  },
+  {
+    "id": "4",
+    "title": "Interstellar",
+    "genre": "Drama",
+    "rate": "8.6"
+  },
+  {
+    "id": "5",
+    "title": "Breaking Bad",
+    "genre": "Thriller",
+    "rate": "9.5"
+  },
+  {
+    "id": "6",
+    "title": "Game of Thrones",
+    "genre": "Fantasy",
+    "rate": "9.5"
+  },
+  {
+    "id": "7",
+    "title": "Vikings",
+    "genre": "History",
+    "rate": "8.6"
+  }
+]

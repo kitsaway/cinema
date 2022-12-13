@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -12,12 +12,8 @@ import Typography from "@mui/material/Typography";
 import MovieContext from "../../context/MovieContext";
 
 const Movie = ({ movie: { id, title, genre, rate } }) => {
-  const { addToFavourites, removeMovie } = useContext(MovieContext);
-  const [favourite, setFavourite] = useState(false);
+  const { favourites, addToFavourites, removeMovie } = useContext(MovieContext);
 
-  const handleFavourite = () => {
-    setFavourite(!favourite);
-  };
   return (
     <Card sx={{ minWidth: 155 }}>
       <CardContent>
@@ -43,14 +39,12 @@ const Movie = ({ movie: { id, title, genre, rate } }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button
-          size="small"
-          onClick={() => {
-            handleFavourite();
-            addToFavourites(id);
-          }}
-        >
-          {favourite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+        <Button size="small" onClick={() => addToFavourites(id)}>
+          {favourites.find((movie) => movie.id === id) ? (
+            <FavoriteIcon />
+          ) : (
+            <FavoriteBorderIcon />
+          )}
         </Button>
         <Button
           size="small"

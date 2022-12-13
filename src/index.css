@@ -3,6 +3,33 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.pagination {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
+  font-size: 1rem;
+}
+
+.pagination .page-num {
+  padding: 8px 15px;
+  border-radius: 3px;
+  font-weight: 400;
+  color: #1b2330;
+  cursor: pointer;
+}
+
+.pagination .page-num:hover {
+  background-color: #1b2330;
+  color: #fff;
+}
+
+.pagination .page-active {
+  background-color: #1b2330;
+  color: #fff;
 }

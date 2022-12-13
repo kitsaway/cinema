@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useContext, useState, useEffect } from "react";
 import Grid from "@mui/material/Grid";
-import { Container, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import MovieContext from "./../../context/MovieContext";
 import Movie from "../Movie";
 import AppPagination from "../Pagination";

@@ -4,9 +4,7 @@ import Filter from "../Filter";
 
 const Home = () => {
   return (
-    <Container
-      sx={{ mt: 3 }}
-    >
+    <Container sx={{ mt: 3 }}>
       <Filter />
       <Movies />
     </Container>

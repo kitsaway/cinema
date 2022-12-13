@@ -1,16 +1,22 @@
 import * as React from "react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import GradeIcon from "@mui/icons-material/Grade";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import MovieContext from "../../context/MovieContext";
 
 const Movie = ({ movie: { id, title, genre, rate } }) => {
-  const { removeMovie } = useContext(MovieContext);
+  const { addToFavourites, removeMovie } = useContext(MovieContext);
+  const [favourite, setFavourite] = useState(false);
+
+  const handleFavourite = () => {
+    setFavourite(!favourite);
+  };
   return (
     <Card sx={{ minWidth: 155 }}>
       <CardContent>
@@ -30,8 +36,14 @@ const Movie = ({ movie: { id, title, genre, rate } }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">
-          <FavoriteBorderIcon />
+        <Button
+          size="small"
+          onClick={() => {
+            handleFavourite();
+            addToFavourites(id);
+          }}
+        >
+          {favourite? <FavoriteIcon /> : <FavoriteBorderIcon />}
         </Button>
         <Button
           size="small"
